@@ -3,6 +3,7 @@ package com.example.testerdb;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.database.sqlite.*;
 import android.database.*;
 import android.util.Log;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         DatabaseSetup DogDB = new DatabaseSetup();
-        DogDB.createDatabase();
+        DogDB.createDatabase(getApplicationContext());
 
     }
 }
